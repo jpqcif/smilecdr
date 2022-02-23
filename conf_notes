@@ -1,0 +1,6 @@
+#notes ignore
+
+module.clustermgr.config.db.password=#{env['dbpassword']}
+
+docker cp smilecdr:/home/smile/smilecdr/classes/cdr-config-Master.properties
+
