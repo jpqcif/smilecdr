@@ -2,8 +2,8 @@ version: "3.3"
 services:
   smilecdr:
     container_name: smile_cdr
-    #image: docker.smilecdr.com/smilecdr:2022.02.R01  
-    build: . 
+    image: docker.smilecdr.com/smilecdr:2022.02.R01  
+    #build:
     #  context: . 
     ports:
       - "8000:8000"
