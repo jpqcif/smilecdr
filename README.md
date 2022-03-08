@@ -12,3 +12,8 @@
  
 ## Colloborators
 oridashi, ronalddendere
+
+## references
+* https://smilecdr.com/docs/getting_started/platform_requirements.html#database-requirements
+* https://smilecdr.com/docs/installation/docker_container_installation.html
+* https://smilecdr.com/docs/appendix/installing_smilecdr_nginx_and_postgresql_in_a_docker_stack.html
