@@ -5,6 +5,7 @@ services:
     #image: docker.smilecdr.com/smilecdr:2022.02.R01  
     build:
       context: . 
+      dockerfile: Dockerfile_smile
     ports:
       - "8000:8000"
       - "9000:9000"
@@ -23,8 +24,13 @@ services:
       - log:/home/ubuntu/smilecdr/log
       - mq:/home/ubuntu/smilecdr/activemq-data
     restart: "unless-stopped"
+    depends_on:
+      - postgresdb
   postgresdb:
-    image: postgres:14
+    #image: postgres:12.2
+    build:
+      context: . 
+      dockerfile: Dockerfile_postgres
     container_name: postgres_cdr
     ports:
       - "5432:5432"
