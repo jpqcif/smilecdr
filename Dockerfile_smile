@@ -1,4 +1,6 @@
 # Use base Smile CDR image as parent image
+#FROM docker.smilecdr.com/smilecdr:2020.08.R02
+#FROM docker.smilecdr.com/smilecdr:2021.11.R04
 FROM docker.smilecdr.com/smilecdr:2022.02.R01 
 
 # Set the smilecdr folder as working directory
