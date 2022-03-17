@@ -7,9 +7,12 @@
 
 ## Methodology
 * docker-compose up --build
-* configure reverse proxy to relevant sub-domains
+* configure reverse proxy open ports to relevant sub-domains
 * add user with sftp home that can access database/export files
  
+## Administration
+* cron dump_db.sh daily to preserve persistence 
+
 ## Colloborators
 oridashi, ronalddendere
 
@@ -19,7 +22,9 @@ oridashi, ronalddendere
 * https://smilecdr.com/docs/appendix/installing_smilecdr_nginx_and_postgresql_in_a_docker_stack.html
 
 ## todo
-* remove database errors: Follow this: https://smilecdr.com/docs/database_administration/setting_up_postgresql.html
-* add form that submits to API
+* cron a backup of database schema
+* use NGINX instead of Apache
+* get domain & certificate
 * build auth layer 
 * Setup CORS
+* add form that submits to API

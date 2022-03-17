@@ -9,8 +9,10 @@ set -e
 #The script below creates only a single DB for Smile CDR with name $CDR_DB_NAME with a single user ID and password "$CDR_USER_LOGIN" and "$CDR_PASSWORD"  
 #Additional CREATE and GRANT statements can be included if additional databases and/or user ids are required.
 
-psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" &lt;&lt;- EOSQL  
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<- EOSQL  
    CREATE ROLE $CDR_USER LOGIN password '$CDR_PASSWORD';  
    CREATE DATABASE $CDR_DB_NAME;  
    GRANT ALL PRIVILEGES ON DATABASE $CDR_DB_NAME TO $CDR_USER;  
 EOSQL
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" < /docker-entrypoint-initdb.d/sql/cdr_sys.sql
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$CDR_DB_NAME" < /docker-entrypoint-initdb.d/sql/cdr.sql  

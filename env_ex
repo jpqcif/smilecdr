@@ -1,5 +1,6 @@
 DB_SUPER_USER_ID=postgres
 DB_SUPER_USER_PASSWORD=MySecretPassword
+DB_SYS_NAME=cdr_sys
 DB_CDR_NAME=cdr
 DB_CDR_USERID=cdr
 DB_CDR_PASSWORD=somepassword
