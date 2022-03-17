@@ -11,7 +11,9 @@
 * add user with sftp home that can access database/export files
  
 ## Administration
-* cron dump_db.sh daily to preserve persistence 
+# crontab -u <user> -e
+# 0 5 * * * /home/ubuntu/smilecdr_repo/dump_db.sh 
+
 
 ## Colloborators
 oridashi, ronalddendere
