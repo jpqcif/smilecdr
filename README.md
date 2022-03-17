@@ -22,7 +22,6 @@ oridashi, ronalddendere
 * https://smilecdr.com/docs/appendix/installing_smilecdr_nginx_and_postgresql_in_a_docker_stack.html
 
 ## todo
-* cron a backup of database schema
 * use NGINX instead of Apache
 * get domain & certificate
 * build auth layer 
