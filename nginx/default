@@ -154,3 +154,37 @@ server {
         }
 }
 
+server {
+	listen 443 ssl;
+	listen [::]:443 ssl;
+	include snippets/snakeoil.conf;
+
+	server_name path.smile.phreak.link;
+
+        location / {
+    		proxy_pass http://localhost:8080;
+ 		proxy_buffers 16 4k;
+    		proxy_buffer_size 2k;
+        }
+}
+
+
+server {
+	listen 443 ssl;
+	listen [::]:443 ssl;
+	include snippets/snakeoil.conf;
+
+	server_name static.smile.phreak.link;
+
+	root /home/ubuntu/smilecdr_repo/web;
+
+	# Add index.php to the list if you are using PHP
+	index index.html index.htm;
+
+	server_name _;
+
+        location / {
+		try_files $uri $uri/ =404;
+        }
+}
+
