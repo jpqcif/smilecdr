@@ -50,7 +50,19 @@ services:
     ports:
       - 8888:8080
     restart: unless-stopped
+  pathling:
+    image: aehrc/pathling:4
+    container_name: pathling_cdr
+    ports:
+      - "8080:8080"
+    environment:
+      spark.executor.memory: 4g
+      pathling.cors.allowedOrigins: http://localhost:8080
+    restart: unless-stopped
+    volumes:
+      - pathling:/home/ubuntu/smilecdr/warehouse
 volumes:
   log:
   mq:
   db:
+  pathling:
