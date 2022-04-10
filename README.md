@@ -11,8 +11,8 @@
 * add user with sftp home that can access database/export files
  
 ## Administration
-# crontab -u <user> -e
-# 0 5 * * * /home/ubuntu/smilecdr_repo/dump_db.sh 
+1. crontab -e
+2. 0 5 * * * /home/ubuntu/smilecdr_repo/dump_db.sh 
 
 
 ## Colloborators
