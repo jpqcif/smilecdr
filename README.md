@@ -14,7 +14,6 @@
 1. crontab -e
 2. 0 5 * * * /home/ubuntu/smilecdr_repo/dump_db.sh 
 
-
 ## Colloborators
 oridashi, ronalddendere
 
@@ -24,8 +23,8 @@ oridashi, ronalddendere
 * https://smilecdr.com/docs/appendix/installing_smilecdr_nginx_and_postgresql_in_a_docker_stack.html
 
 ## todo
-* use NGINX instead of Apache
-* get domain & certificate
 * build auth layer 
 * Setup CORS
-* add form that submits to API
+* add questionnaire resource
+* allow questionnaireResponse to be validated.  
+* Give pathling an MDJSON file from SMILE
