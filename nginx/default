@@ -101,9 +101,9 @@ server {
 server {
 	listen 443 ssl;
 	listen [::]:443 ssl;
-	include snippets/snakeoil.conf;
+	include snippets/qcif.conf;
 
-	server_name admin.smile.phreak.link;
+	server_name admin.smile.phreak.link  admin.acdc.qcif.edu.au;
 
         location / {
     		proxy_pass http://localhost:9100;
@@ -115,9 +115,11 @@ server {
 server {
 	listen 443 ssl;
 	listen [::]:443 ssl;
-	include snippets/snakeoil.conf;
+	include snippets/qcif.conf;
 
-	server_name api.smile.phreak.link;
+    	client_max_body_size 8M;
+
+	server_name api.smile.phreak.link  api.acdc.qcif.edu.au;
 
         location / {
     		proxy_pass http://localhost:8000;
@@ -129,9 +131,9 @@ server {
 server {
 	listen 443 ssl;
 	listen [::]:443 ssl;
-	include snippets/snakeoil.conf;
+	include snippets/qcif.conf;
 
-	server_name db.smile.phreak.link;
+	server_name db.smile.phreak.link  db.acdc.qcif.edu.au;
 
         location / {
     		proxy_pass http://localhost:8888;
@@ -143,9 +145,9 @@ server {
 server {
 	listen 443 ssl;
 	listen [::]:443 ssl;
-	include snippets/snakeoil.conf;
+	include snippets/qcif.conf;
 
-	server_name data.smile.phreak.link;
+	server_name data.smile.phreak.link  data.acdc.qcif.edu.au;
 
         location / {
     		proxy_pass http://localhost:8001;
@@ -157,9 +159,9 @@ server {
 server {
 	listen 443 ssl;
 	listen [::]:443 ssl;
-	include snippets/snakeoil.conf;
+	include snippets/qcif.conf;
 
-	server_name path.smile.phreak.link;
+	server_name path.smile.phreak.link  pathling.acdc.qcif.edu.au;
 
         location / {
     		proxy_pass http://localhost:8080;
@@ -172,9 +174,9 @@ server {
 server {
 	listen 443 ssl;
 	listen [::]:443 ssl;
-	include snippets/snakeoil.conf;
+	include snippets/qcif.conf;
 
-	server_name static.smile.phreak.link;
+	server_name static.smile.phreak.link static.acdc.qcif.edu.au;
 
 	root /home/ubuntu/smilecdr_repo/web;
 
